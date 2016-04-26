@@ -4,8 +4,6 @@ from .forms import PostForm
 from django.core.urlresolvers import reverse
 
 # Create your views here.
-detail_url = resolve_url(post)
-
 def index(request):
     post_list = Post.objects.all()
     return render(request, 'blog/index.html', {'post_list' : post_list})
